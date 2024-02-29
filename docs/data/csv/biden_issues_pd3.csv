@@ -1,0 +1,11 @@
+Sentiment,Sentiment_Count,Issue
+positive,47,Gun_Control
+negative,174,Gun_Control
+positive,22,Birth_Rights
+negative,108,Birth_Rights
+positive,108,Covid
+negative,359,Covid
+positive,38,Ukraine
+negative,254,Ukraine
+positive,91,Taxation
+negative,201,Taxation

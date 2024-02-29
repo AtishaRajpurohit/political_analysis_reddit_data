@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>ANLY 503- Project Group 14</title>
+  <link rel="stylesheet" href="frontend/fontawesome-5.5/css/all.min.css" />
+  <link rel="stylesheet" href="frontend/slick/slick.css">
+  <link rel="stylesheet" href="frontend/slick/slick-theme.css">
+  <link rel="stylesheet" href="frontend/magnific-popup/magnific-popup.css">
+  <link rel="stylesheet" href="frontend/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="frontend/css/tooplate-infinite-loop.css" />
+  <!--
+-->
+</head>
+
+<style>
+  table,
+  th,
+  td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+</style>
+
+<body>
+  <!-- Hero section -->
+  <section id="infinite" class="text-white tm-font-big tm-parallax">
+    <!-- Navigation -->
+    <nav class="text-white navbar navbar-expand-md tm-navbar" id="tmNav">
+      <div class="text-white container">
+        <div class="text-white tm-next">
+          <a href="#infinite" class="navbar-brand"></a>
+        </div>
+
+        <button class="text-white navbar-toggler" type="button" data-toggle="collapse"
+          data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="fas fa-bars navbar-toggler-icon"></i>
+        </button>
+        <div class="text-white collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link tm-nav-link" href="../index.html">Introduction</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link tm-nav-link" href="eda.html">EDA</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link tm-nav-link" href="nlp.html">NLP</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link tm-nav-link" href="ml.html">ML</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link tm-nav-link" href="#infinite">Conclusion</a>
+            </li>
+
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="text-center tm-hero-text-container">
+      <div class="tm-hero-text-container-inner">
+        <h2 class="tm-hero-title">Conclusion</h2>
+
+        <p class="tm-hero-subtitle">
+          Group 30:
+          <br>
+          Abhishek Dutt, Austin Eaton, Jack Piccione & Atisha Rajpurohit
+          <br>
+        </p>
+      </div>
+    </div>
+
+    <div class="tm-next tm-intro-next">
+      <a href="#whatwedo" class="text-center tm-down-arrow-link">
+        <i class="fas fa-2x fa-arrow-down tm-down-arrow"></i>
+      </a>
+    </div>
+  </section>
+
+
+  <section id="Technical" class="tm-section-pad-top">
+    <div class="container">
+
+      <div class="row tm-content-box">
+        <!-- first row -->
+        <div class="col-lg-12 col-xl-12">
+          <h2 class="tm-text-primary mb-4 tm-section-title">Conclusion</h2>
+          <div class="tm-intro-text-container">
+            <p>
+              The American people’s opinion on politics is an extremely difficult metric to judge and predict. News
+              agencies and organizations such as FiveThirtyEight, CNN, and the Pew Research Center conduct polls and
+              make bold predictions that often fall short of hitting their mark. But with the opinion of over
+              three-hundred million Americans to take into account, it can be difficult to accurately predict how
+              American’s feel towards political parties and politicians. Over the course of this project, we attempted
+              to understand the subtle nuances represented by the American political system and those who are involved
+              in it. Here, we set out twelve initial business goals to guide our analysis, and applied multiple tools
+              and methods in order to accomplish them. </p>
+
+            <p>
+              Our first approach to answering the business goals was in the form of exploratory data analysis. Here, we
+              applied the use of summary statistics, external data sources, and various data visualizations to
+              understand the vast amount of data that we were working with. By doing so, we were able to draw four key
+              insights regarding politics in the United States. To begin with, we were able to determine that discussion
+              around politics online is very evenly balanced, with users in liberal and conservative forums posting on
+              average the same amount per person. Secondly, we determined that people who identify more with the
+              democratic party are more likely to consider arguments from an opposing viewpoint. In this case, the
+              opposing viewpoint was from the subreddit r/Conservative. The plot below helps to illustrate this. The
+              third goal we accomplished through exploratory data analysis was discerning what topics election
+              candidates should cover by looking at popular political topics. Here, we found that the top three
+              political topics for 2022 were gun control, taxation, and Covid-19. Lastly, we were able to determine the
+              differences in reactions and sentiments of democrats and republicans towards President Biden.
+            </p>
+            <!-- <br> -->
+            <figure>
+              <figcaption><b>Plot 1</b></figcaption>
+              <iframe src="../data/plots/centrist_submissions.html" width="100%" height="620"></iframe>
+            </figure>
+            <br>
+            <br>
+
+            <p>Since the data we were working with was textual and contained the comments and submissions of tens of
+              thousands of Reddit posts, it was clear to us that many of the goals we set out needed to be accomplished
+              with methods other than basic summary statistics and data visualizations. Therefore, we decided to work
+              with more advanced tools to tackle these difficult goals, hence, the use of NLP (natural language
+              processing). Natural language processing was vital in our efforts and allowed us to realize four more of
+              our business goals. To begin with, we found that through sentiment analysis, there wasn’t a significant
+              difference in emotions expressed among supporters in different political groups. Thus, leading us to
+              conclude that there isn’t a political group that displays more anger than others in the subreddits we
+              analyzed. Secondly, we found that the way people discuss the president online is not representative of his
+              approval rating. Third, we determined the most popular democrat and republican candidates for the 2024
+              presidential election bid to be: Biden, Harris, Sanders, Trump, DeSantis, Youngkin. Finally, we determined
+              the public’s opinion on how president Biden has handled important issues. The plot below shows how people
+              associated with different political groups felt about these issues. Here, r/Politics represents a
+              politically neutral person, r/Conservative represents someone associating more with the republican party,
+              and r/Democrats for someone associating with the democratic party.</p>
+            <figure>
+              <figcaption><b>Plot 2</b></figcaption>
+              <iframe src="../data/plots/sentiment_combined.html" width="100%" height="820"></iframe>
+            </figure>
+            <br>
+            <br>
+
+            <p>Even after applying the methods discussed above, there were still multiple business goals that were too
+              complex and needed different tools to accomplish. Here, machine learning was applied to the data
+              and we were able to generate models that allowed us to realize two more of our initial goals. The first
+              goal that we achieved using machine learning was the ability to determine whether a comment in a subreddit
+              would be considered controversial or not. This machine learning model was able to predict with 77%
+              accuracy whether a comment posted in the r/Politics subreddit would be considered controversial or not.
+              The confusion matrix from this model is displayed below. The second goal that we achieved using machine
+              learning was the ability to determine whether a random comment is from a user who was either on the
+              liberal or conservative side of the political spectrum. Although this model only generated a 62% accuracy,
+              much lower than the previous model, we still considered this to be a positive outcome.</p>
+            <figure>
+              <figcaption><b>Plot 3</b></figcaption>
+              <iframe src="../data/plots/confusion_matrix_abhishek.png" width="100%" height="740"></iframe>
+            </figure>
+            <br>
+            <br>
+
+            <p>In the end, we were able to carry through on ten of the twelve initial business goals that we started
+              with. Therefore, the immediate next steps for us will be in establishing proper methods to achieve the
+              final two business goals: determining what it means for a person to be politically neutral in today's
+              political climate and determining how socially and culturally different people with opposing political
+              beliefs are. In addition, we plan on fine tuning the machine learning models that were generated. We
+              believe this can be done by increasing the amount of training data, as well as fine-tuning hyperparameters
+              within the models. </p>
+
+            <br><br>
+            <h4 class="tm-text-primary mb-4 tm-section-subtitle">Expanding the Analysis</h4>
+            <p>To expand our analysis of predicting whether a comment is classfied as controversial or not in the machine learning section of the project we used random forest classifier in addition to the previously used linear regression model. The results of the random forest classifier were much better as compared to the linear regression model. As we can see from table 1 below, all the metrics that were used to calculate the performance of the machine learning model.
+            </p>
+            <br>
+            <figure>
+                  <figcaption><b>Table 1: Random Forest Evaluation Metrics</b></figcaption>
+                  <table>
+                    <!-- <caption>The Three Most Popular JavaScript Libraries</caption> -->
+                    <thead>
+                      <tr>
+                        <th>Evaluation Metric</th>
+                        <th>Score</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Accuracy</td>
+                        <td>0.97090</td>
+                      </tr>
+                      <tr>
+                        <td>Precision</td>
+                        <td>0.96440</td>
+                      </tr>
+                      <tr>
+                        <td>Recall</td>
+                        <td>0.93567</td>
+                      </tr>
+                      <tr>
+                        <td>F1</td>
+                        <td>0.94004</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </figure>
+                <a href="../code/html/nlp_abhishek.html">Link to notebook<a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </section>
+
+
+
+
+
+  <script src="frontend/js/jquery-1.9.1.min.js"></script>
+  <script src="frontend/slick/slick.min.js"></script>
+  <script src="frontend/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <script src="frontend/js/easing.min.js"></script>
+  <script src="frontend/js/jquery.singlePageNav.min.js"></script>
+  <script src="frontend/js/bootstrap.min.js"></script>
+  <script>
+
+    function getOffSet() {
+      var _offset = 450;
+      var windowHeight = window.innerHeight;
+
+      if (windowHeight > 500) {
+        _offset = 400;
+      }
+      if (windowHeight > 680) {
+        _offset = 300
+      }
+      if (windowHeight > 830) {
+        _offset = 210;
+      }
+
+      return _offset;
+    }
+
+    function setParallaxPosition($doc, multiplier, $object) {
+      var offset = getOffSet();
+      var from_top = $doc.scrollTop(),
+        bg_css = 'center ' + (multiplier * from_top - offset) + 'px';
+      $object.css({ "background-position": bg_css });
+    }
+
+    // Parallax function
+    // Adapted based on https://codepen.io/roborich/pen/wpAsm        
+    var background_image_parallax = function ($object, multiplier, forceSet) {
+      multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+      multiplier = 1 - multiplier;
+      var $doc = $(document);
+      // $object.css({"background-attatchment" : "fixed"});
+
+      if (forceSet) {
+        setParallaxPosition($doc, multiplier, $object);
+      } else {
+        $(window).scroll(function () {
+          setParallaxPosition($doc, multiplier, $object);
+        });
+      }
+    };
+
+    var background_image_parallax_2 = function ($object, multiplier) {
+      multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+      multiplier = 1 - multiplier;
+      var $doc = $(document);
+      $object.css({ "background-attachment": "fixed" });
+
+      $(window).scroll(function () {
+        if ($(window).width() > 768) {
+          var firstTop = $object.offset().top,
+            pos = $(window).scrollTop(),
+            yPos = Math.round((multiplier * (firstTop - pos)) - 186);
+
+          var bg_css = 'center ' + yPos + 'px';
+
+          $object.css({ "background-position": bg_css });
+        } else {
+          $object.css({ "background-position": "center" });
+        }
+      });
+    };
+
+    $(function () {
+      // Hero Section - Background Parallax
+      background_image_parallax($(".tm-parallax"), 0.30, false);
+      background_image_parallax_2($("#contact"), 0.80);
+      background_image_parallax_2($("#testimonials"), 0.80);
+
+      // Handle window resize
+      window.addEventListener('resize', function () {
+        background_image_parallax($(".tm-parallax"), 0.30, true);
+      }, true);
+
+      // Detect window scroll and update navbar
+      $(window).scroll(function (e) {
+        if ($(document).scrollTop() > 120) {
+          $('.tm-navbar').addClass("scroll");
+        } else {
+          $('.tm-navbar').removeClass("scroll");
+        }
+      });
+
+      // Close mobile menu after click 
+      $('#tmNav a').on('click', function () {
+        $('.navbar-collapse').removeClass('show');
+      })
+
+      // Scroll to corresponding section with animation
+      $('#tmNav').singlePageNav({
+        'easing': 'easeInOutExpo',
+        'speed': 600
+      });
+
+      // Add smooth scrolling to all links
+      // https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
+      $("a").on('click', function (event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          var hash = this.hash;
+
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 600, 'easeInOutExpo', function () {
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+
+      // Pop up
+      $('.tm-gallery').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        gallery: { enabled: true }
+      });
+
+      $('.tm-testimonials-carousel').slick({
+        dots: true,
+        prevArrow: false,
+        nextArrow: false,
+        infinite: false,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: 2
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1
+            }
+          }
+        ]
+      });
+
+      // Gallery
+      $('.tm-gallery').slick({
+        dots: true,
+        infinite: false,
+        slidesToShow: 5,
+        slidesToScroll: 2,
+        responsive: [
+          {
+            breakpoint: 1199,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 991,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 767,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+    });
+  </script>
+</body>
+
+</html>

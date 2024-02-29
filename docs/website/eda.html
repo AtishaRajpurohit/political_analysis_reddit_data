@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>ANLY 503- Project Group 14</title>
+  <link rel="stylesheet" href="frontend/fontawesome-5.5/css/all.min.css" />
+  <link rel="stylesheet" href="frontend/slick/slick.css">
+  <link rel="stylesheet" href="frontend/slick/slick-theme.css">
+  <link rel="stylesheet" href="frontend/magnific-popup/magnific-popup.css">
+  <link rel="stylesheet" href="frontend/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="frontend/css/tooplate-infinite-loop.css" />
+  <!--
+-->
+</head>
+
+<style>
+  table,
+  th,
+  td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+</style>
+
+<body>
+  <!-- Hero section -->
+  <section id="infinite" class="text-white tm-font-big tm-parallax">
+    <!-- Navigation -->
+    <nav class="text-white navbar navbar-expand-md tm-navbar" id="tmNav">
+      <div class="text-white container">
+        <div class="text-white tm-next">
+          <a href="#infinite" class="navbar-brand"></a>
+        </div>
+
+        <button class="text-white navbar-toggler" type="button" data-toggle="collapse"
+          data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="fas fa-bars navbar-toggler-icon"></i>
+        </button>
+        <div class="text-white collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="../index.html">Introduction</span></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="eda.html">EDA</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link tm-nav-link" href="#Technical">EDA Summary</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link tm-nav-link" href="#Fundamental">EDA Report</a>
+            </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="nlp.html">NLP</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link tm-nav-link" href="ml.html">ML</a>
+            </li>
+            
+            <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="conclusion.html">Conclusion</a>
+            </li>
+
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="text-center tm-hero-text-container">
+      <div class="tm-hero-text-container-inner">
+        <h2 class="tm-hero-title">EDA: Reddit Politics Data</h2>
+
+        <p class="tm-hero-subtitle">
+          Group 30:
+          <br>
+          Abhishek Dutt, Austin Eaton, Jack Piccione & Atisha Rajpurohit
+          <br>
+        </p>
+      </div>
+    </div>
+
+    <div class="tm-next tm-intro-next">
+      <a href="#whatwedo" class="text-center tm-down-arrow-link">
+        <i class="fas fa-2x fa-arrow-down tm-down-arrow"></i>
+      </a>
+    </div>
+  </section>
+
+
+  <section id="Technical" class="tm-section-pad-top">
+    <div class="container">
+
+      <div class="row tm-content-box">
+        <!-- first row -->
+        <div class="col-lg-12 col-xl-12">
+          <h2 class="tm-text-primary mb-4 tm-section-title">Summary</h2>
+          <div class="tm-intro-text-container">
+            <p>Exploring the dataset from different angles, can answer a variety of questions concerning American politics. Initial exploration starts with seeing when users commented the most, that was around the electoral results and inauguration. Then posting trends within the general users, democrats and conservatives were looked into. This showed that conservatives users posted more than democrats and that there were fewer unique democrat authors posting. In spite of this, there were more varied opposing conversations within the democrats group than the conservatives group. This shows that there are more differing opinions within the democrats group than the conservatives. </p>
+            <p>Exploration into how often certain issues were spoken about has been done as well. Gun rights proved to be the most discussed out of a number of issues, followed by taxation and covid. Looking into the number of comments about President Biden from Jan 2021 to Aug 2022, events important to the users were revealed.These events such as the inauguration of president Biden and  shooting in Idaho were some of the most heavily discussed among the users.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </section>
+
+  <section id="Fundamental" class="tm-section-pad-top">
+
+    <div class="container">
+
+      <div class="row tm-content-box">
+        <!-- first row -->
+        <div class="col-lg-12 col-xl-12">
+          <div class="tm-intro-text-container">
+            <h2 class="tm-text-primary mb-4 tm-section-title">Report</h2>
+            <br><a
+                  href="../code/html/project_eda.html">Link
+                  to notebook<a>
+            <p>The initial exploratory analysis revolves around exploring the number of comments and submissions for a number of subreddits. These subreddits are r/Politics, r/Conservatives and r/Democrats. The idea is to gauge the conversation frequency around different timelines and for the different political ideologies. This could be to explore a variety of questions such as ‘Do people of one political ideology have more submissions or attract more comments than the other?’ and other questions mentioned in the introduction. The first plot looks at the count of comments from Jan 2021 to Aug 2022, for the r/Politics subreddit.</p>
+            <br>
+            <figure>
+              <figcaption><b>Plot 1</b></figcaption>
+              <iframe src="../data/plots/count_comments.html" width="60%" height="550"></iframe>
+            </figure>
+            <p>
+              This plot introduces some general aspects of exploration, that is the frequency of comments. It can be seen that the number of comments were the highest in January, still being high in February and then a general trend with similar peaks can be seen. This agrees with the fact that the conversations revolved around presidential elections in Jan 2021 and hence the high frequency of comments. Moving to explore trends within the different political ideologies.
+            </p>
+            <figure>
+              <figcaption><b>Plot 2</b></figcaption>
+              <iframe src="../data/plots/log_submissions.html" width="100%" height="650"></iframe>
+            </figure>
+            <figure>
+              <figcaption><b>Plot 3</b></figcaption>
+              <iframe src="../data/plots/avg_submissions.html" width="100%" height="650"></iframe>
+            </figure>
+            <p>
+              Plots 2 and 3, look into the number of posts or submissions made by each user for these three subreddits. From plot 2, it can be observed that the log number of submissions per user are broadly similar for these three subreddits in terms of the mean number and upper quartile number of submissions. The outliers give some additional information, and show that there are slightly higher numbers of submissions per user for r/Conservatives. Since the numbers seem to be close, it makes sense to see the non log plots. Plot 4 achieves that by plotting the average number of submissions per user for these three subreddits. This shows us that while r/Conservatives may have a higher number of submissions per user for some users , the average number of submissions per user is higher for r/Politics. To simplify this, although some conservatives are posting more submissions than others, on an average there are more submissions in the general r/Politics subreddit.
+            </p>
+            <figure>
+              <figcaption><b>Plot 4</b></figcaption>
+              <iframe src="../data/plots/author_count_submissions.html" width="100%" height="650"></iframe>
+            </figure>
+            <p>
+            </p>
+            <figure>
+              <figcaption><b>Plot 5</b></figcaption>
+              <iframe src="../data/plots/centrist_submissions.html" width="100%" height="650"></iframe>
+            </figure>
+            <p>
+              Extending the exploration for how these three subreddits post, the number of unique authors have been plotted in Plot 4. This helps in understanding how many individuals are contributing to the overall conversations in these subreddits. r/democrat has the lowest number of unique authors and r/Politics has the highest number of unique authors. This shows that more views are expressed under r/politics and may be a better choice for assessing views with lesser bias. Plot 5 shows the proportion of users who are posting opposing views in the 2 subreddits : r/democrat and r/Conservative. This shows how varied the views could be under r/democrat as opposed to r/Conservative.While discussing the above, it makes sense to see the distribution of the political affiliations.
+            </p>
+            <figure>
+              <figcaption><b>Plot 6</b></figcaption>
+              <iframe src="../data/plots/political_affiliations.html" width="100%" height="650"></iframe>
+            </figure>
+            <p>
+            </p>
+            <figure>
+              <figcaption><b>Plot 7</b></figcaption>
+              <iframe src="../data/plots/count_topics.html" width="100%" height="650"></iframe>
+            </figure>
+            <p>Plot 6 shows the distribution of the political affiliations within the r/Politics subreddit. This confirms the analysis from Plot 4 showing fewer unique authors for democrats. Plot 7 takes a step back from political ideologies and moves into conversations around various issues. These issues are gun control, birth rights, terrorism, health care, covid and taxation. The idea is to see which issues have been discussed the most and hence understand the importance of these issues. Gun control is the most discussed issue with taxation coming second. After looking into these issues, exploring the conversations around president Biden could be insightful.
+            </p>
+            <figure>
+              <figcaption><b>Plot 8</b></figcaption>
+              <iframe src="../data/plots/biden_sum_comments.html" width="100%" height="650"></iframe>
+            </figure>
+            <p>
+            </p>
+            <figure>
+              <figcaption><b>Plot 9</b></figcaption>
+              <iframe src="../data/plots/biden_controversial_comments.html" width="100%" height="650"></iframe>
+            </figure>
+            <p>Plot 8 shows the total number of comments about the president , each day from Jan 2021 to Aug 2022. This plot can be viewed in conjunction with plot 1, which shows that the highest number of comments were in Jan 2021. The days on which the highest number of comments were there for president Biden were on January 7,2021 which was when the U.S. Congress certified the electoral result and January 22,2021 around the time the president took office. A lot of comments were also posted on October 26,2021 when the shooting in Idaho happened. This plot shows which issues were heavily discussed and had an impact with the people. Plot 9 shows the controversiality of the scores associated with the comments about the president. 
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+
+
+
+  <script src="frontend/js/jquery-1.9.1.min.js"></script>
+  <script src="frontend/slick/slick.min.js"></script>
+  <script src="frontend/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <script src="frontend/js/easing.min.js"></script>
+  <script src="frontend/js/jquery.singlePageNav.min.js"></script>
+  <script src="frontend/js/bootstrap.min.js"></script>
+  <script>
+
+    function getOffSet() {
+      var _offset = 450;
+      var windowHeight = window.innerHeight;
+
+      if (windowHeight > 500) {
+        _offset = 400;
+      }
+      if (windowHeight > 680) {
+        _offset = 300
+      }
+      if (windowHeight > 830) {
+        _offset = 210;
+      }
+
+      return _offset;
+    }
+
+    function setParallaxPosition($doc, multiplier, $object) {
+      var offset = getOffSet();
+      var from_top = $doc.scrollTop(),
+        bg_css = 'center ' + (multiplier * from_top - offset) + 'px';
+      $object.css({ "background-position": bg_css });
+    }
+
+    // Parallax function
+    // Adapted based on https://codepen.io/roborich/pen/wpAsm        
+    var background_image_parallax = function ($object, multiplier, forceSet) {
+      multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+      multiplier = 1 - multiplier;
+      var $doc = $(document);
+      // $object.css({"background-attatchment" : "fixed"});
+
+      if (forceSet) {
+        setParallaxPosition($doc, multiplier, $object);
+      } else {
+        $(window).scroll(function () {
+          setParallaxPosition($doc, multiplier, $object);
+        });
+      }
+    };
+
+    var background_image_parallax_2 = function ($object, multiplier) {
+      multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+      multiplier = 1 - multiplier;
+      var $doc = $(document);
+      $object.css({ "background-attachment": "fixed" });
+
+      $(window).scroll(function () {
+        if ($(window).width() > 768) {
+          var firstTop = $object.offset().top,
+            pos = $(window).scrollTop(),
+            yPos = Math.round((multiplier * (firstTop - pos)) - 186);
+
+          var bg_css = 'center ' + yPos + 'px';
+
+          $object.css({ "background-position": bg_css });
+        } else {
+          $object.css({ "background-position": "center" });
+        }
+      });
+    };
+
+    $(function () {
+      // Hero Section - Background Parallax
+      background_image_parallax($(".tm-parallax"), 0.30, false);
+      background_image_parallax_2($("#contact"), 0.80);
+      background_image_parallax_2($("#testimonials"), 0.80);
+
+      // Handle window resize
+      window.addEventListener('resize', function () {
+        background_image_parallax($(".tm-parallax"), 0.30, true);
+      }, true);
+
+      // Detect window scroll and update navbar
+      $(window).scroll(function (e) {
+        if ($(document).scrollTop() > 120) {
+          $('.tm-navbar').addClass("scroll");
+        } else {
+          $('.tm-navbar').removeClass("scroll");
+        }
+      });
+
+      // Close mobile menu after click 
+      $('#tmNav a').on('click', function () {
+        $('.navbar-collapse').removeClass('show');
+      })
+
+      // Scroll to corresponding section with animation
+      $('#tmNav').singlePageNav({
+        'easing': 'easeInOutExpo',
+        'speed': 600
+      });
+
+      // Add smooth scrolling to all links
+      // https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
+      $("a").on('click', function (event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          var hash = this.hash;
+
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 600, 'easeInOutExpo', function () {
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+
+      // Pop up
+      $('.tm-gallery').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        gallery: { enabled: true }
+      });
+
+      $('.tm-testimonials-carousel').slick({
+        dots: true,
+        prevArrow: false,
+        nextArrow: false,
+        infinite: false,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: 2
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1
+            }
+          }
+        ]
+      });
+
+      // Gallery
+      $('.tm-gallery').slick({
+        dots: true,
+        infinite: false,
+        slidesToShow: 5,
+        slidesToScroll: 2,
+        responsive: [
+          {
+            breakpoint: 1199,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 991,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 767,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+    });
+  </script>
+</body>
+
+</html>

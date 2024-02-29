@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ANLY 503- Project Group 14</title>
+    <link rel="stylesheet" href="frontend/fontawesome-5.5/css/all.min.css" />
+    <link rel="stylesheet" href="frontend/slick/slick.css">
+    <link rel="stylesheet" href="frontend/slick/slick-theme.css">
+    <link rel="stylesheet" href="frontend/magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="frontend/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="frontend/css/tooplate-infinite-loop.css" />
+<!--
+-->
+  </head>
+  <body>
+    <!-- Hero section -->
+    <section id="infinite" class="text-white tm-font-big tm-parallax">
+      <!-- Navigation -->
+      <nav class="text-white navbar navbar-expand-md tm-navbar" id="tmNav">              
+        <div class="text-white container">   
+          <div class="text-white tm-next">
+              <a href="#infinite" class="navbar-brand"></a>
+          </div>             
+            
+          <button class="text-white navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars navbar-toggler-icon"></i>
+          </button>
+          <div class="text-white collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="#whatwedo">Introduction</span></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="#Technical">Questions</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="website/eda.html">EDA</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="website/nlp.html">NLP</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="website/ml.html">ML</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="website/conclusion.html">Conclusion</a>
+              </li>
+              
+                              
+            </ul>
+          </div>        
+        </div>
+      </nav>
+      <div class="text-center tm-hero-text-container">
+        <div class="tm-hero-text-container-inner">
+            <h2 class="tm-hero-title">Political Reddit Data Analysis</h2>
+
+            <p class="tm-hero-subtitle">
+                Group 14:
+                <br>
+                Abhishek Dutt, Austin Eaton, Jack Piccione & Atisha Rajpurohit
+              <br>
+            </p>
+        </div>        
+      </div>
+
+      <div class="tm-next tm-intro-next">
+        <a href="#whatwedo" class="text-center tm-down-arrow-link">
+          <i class="fas fa-2x fa-arrow-down tm-down-arrow"></i>
+        </a>
+      </div>      
+    </section>
+
+    <section id="whatwedo" class="tm-section-pad-top">
+        <div class="container">
+            <div class="row tm-content-box"><!-- first row -->
+                <div class="col-lg-12 col-xl-12">
+                    <div class="tm-intro-text-container">
+                        <h2 class="tm-text-primary mb-4 tm-section-title">Introduction</h2>
+                        <p class="mb-4 tm-intro-text">
+
+                          The nation is the most divided it has ever been when it comes to politics.  Technology has played an intricate role in this division.  Most people get all their news and voice their opinions online.  News today is personalized using AI.  This results in many people being fed news that aligns with their viewpoints or news that extremely opposes their viewpoints, all in the spirit of increasing engagement. 
+                          <p>
+                          Polarization in the United States begs the question, is there still a middle ground in American politics?  The aim of the project is to see where Reddit users stand, by analyzing subreddits related to politics.  People are often more honest online than they are in real life.  Therefore, by analyzing Reddit data we will have a better understanding of American politics than polling data.  For example, it appears liberal Reddit users post in both r/democrat and r/Conservative subreddits much more than conservative Reddit users according to figure 1.  This could mean liberals are more open to a middle ground than conservatives.  Polling data would not be able to offer these sorts of insights. <p>
+                          <figure>
+                          <figcaption><b>Figure 1</b></figcaption>
+                          <iframe src="data/plots/centrist_submissions.html" width="100%" height="650"></iframe>
+                          </figure>
+                          Polling data is great, but it is not always accurate.  Just look at what happened in 2016 when Trump beat Clinton.  According to the polls, a Trump win was virtually impossible.  However, if you instead gathered people's opinions of the two candidates from social media data it may have told a very different story.  When people can hide behind a screen and an anonymous username, they show their true colors.  Take the r/politics subreddit for example, one would assume there is roughly an even split between liberal and conservative users however, this is not the case.  More than half of the posters in the r/politics subreddit are conservative according to figure 2.  This could be a useful insight that may highlight the political leaning of the country.<p>
+                          <figure>Figure 2</b></figcaption>
+                          <iframe src="data/plots/political_affiliations.html" width="100%" height="740"></iframe>
+                          </figure>
+                          Using Reddit data, our goal is to see what issues matter to Republicans and Democrats.  What candidates will be nominated by each party in 2024?  Are certain words or phrases associated with an ideology? There are more questions we hope we can answer listed below.  Overall, the goal of this project is to get a realistic read on each party since polls are losing their credibility. 
+
+                            
+                        <p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="Technical" class="tm-section-pad-top">
+        <div class="container">
+
+            <div class="row tm-content-box"><!-- first row -->
+                <div class="col-lg-12 col-xl-12">
+                    <h2 class="tm-text-primary mb-4 tm-section-title">Questions</h2>
+                    <div class="tm-intro-text-container">
+                        <p>
+                          <h4 class="tm-text-primary mb-4 tm-section-subtitle">Question 1:</h4>
+                          <b>Business goal:</b> Determine the most popular leaders from both the republican and the democratic party to see who is in line to get the 2024 Presidential Election bid.<br><br>
+                          <b>Technical proposal:</b> Use NLP to find out the posts that mention the names of the popular leaders. Conduct counts and conduct sentimental analysis to assign negative or positive values to the post. Then present a list of the most popular leaders amongst positive values and the most popular leaders amongst negative values. <br><br><br>
+                          <h4 class="tm-text-primary mb-4 tm-section-subtitle">Question 2:</h4>
+                          <b>Business goal:</b> In order to make some changes to the reddit algorithm to increase screen time of people using reddit, predict the controversiality of the post so that the most controversial posts can be placed above lesser controversial posts in r/politics.<br><br>
+                          <b>Technical proposal:</b> Use NLP to create a few dummy variables that pick up key words from the text, create more dummy variables like time of the post etc. Train the machine learning algorithm on 80% of the data and then test the accuracy of algorithm on the remaining 20% of the data. Then optimize the algorithm to get better results. <br><br><br>
+                          <h4 class="tm-text-primary mb-4 tm-section-subtitle">Question 3:</h4>
+                          <b>Business goal:</b> To find out what topics should the candidate's election promise cover by looking at the popular topics<br><br>
+                          <b>Technical proposal:</b> Create different dummy variables for various topics, involving “economy”, “medicare”, “gun-control” , “terrorism”, “abortion” and other common topics. Take a subset of the data from r/politics to only look at recent posts. Plot the number of posts that refer to these topics. <br><br><br>
+                          <h4 class="tm-text-primary mb-4 tm-section-subtitle">Question 4:</h4>
+                          <b>Business goal:</b> To find out the the differences in reactions and sentiments of democrats and republicans over some of the important political events over the year<br><br>
+                          <b>Technical proposal:</b> To display the word clouds of the submissions and comments from the democrat and republican subreddits. This will be achieved using subsets generated based on the timeline of some of the political events over the year. Comparisons will also be made by analyzing the submission and controversiality scores. <br><br><br>
+                          <h4 class="tm-text-primary mb-4 tm-section-subtitle">Question 5:</h4>
+                          <b>Business goal:</b> To determine the public’s opinion about how president Biden handles important issues.<br><br>
+                          <b>Technical proposal:</b> Create a subset of the dataset which includes the words “biden”, “POTUS” and so on. Then create further subsets based on each of the issues above such as covid19, gun control, inflation, ukraine,etc and i and assess the sentiment scores. This can be further extended to the democrat and republican subreddits separately as well. <br><br><br>
+                          <h4 class="tm-text-primary mb-4 tm-section-subtitle">Question 6:</h4>
+                          <b>Business goal:</b> Determine how socially and culturally different people with opposing political beliefs are.<br><br>
+                          <b>Technical proposal:</b> What are the top secondary subreddits for users that post in liberal or conservative subreddits? What can these top secondary subreddits tell us about liberals and conservatives? Get separate lists that include the usernames of accounts that follow the subreddits. Retrieve list of all subreddits that these accounts follow. Find out which other subreddits, besides r/Conservative and r/democrats are most likely to be followed by accounts in each group.<br><br><br>
+                          <h4 class="tm-text-primary mb-4 tm-section-subtitle">Question 7:</h4>
+                          <b>Business goal:</b> Find out which political group contains the angriest and most emotional followers.<br><br>
+                          <b>Technical proposal:</b> Find the top submissions from both subreddits and collect the comments. Conduct sentiment analysis on both sets of comments to find out if there is any difference between the sentiment scores. Do subreddits for different political groups contain different sentiment scores? I.e., are posts/comments in contrasting political subreddits angrier than their counterparts?<br><br><br>
+                          <h4 class="tm-text-primary mb-4 tm-section-subtitle">Question 8:</h4>
+                          <b>Business goal:</b> Determine which political group is most likely to consider arguments from an opposing viewpoint.<br><br>
+                          <b>Technical proposal:</b> Who would be more likely to post/comment in a politically neutral subreddit: an account that posts mainly in conservative or liberal forums? Find out which group of authors (r/Conservatives and r/democrats) have the larger portion of their users posting/commenting in r/politics. Get unique users from both subreddits and use an inner join to get the number of posts/comments coming from democrats and republicans. Check if the authors from r/democrats are also subscribed to r/Conservative and vice-versa.<br><br><br>
+                          <h4 class="tm-text-primary mb-4 tm-section-subtitle">Question 9:</h4>
+                          <b>Business goal:</b> Determine what it means for a person to be politically neutral in today's political climate.<br><br>
+                          <b>Technical proposal:</b> Determine what people are posting about if they are commenting or submitting in both conservative and liberal subreddits. Is there a common theme? Check if the author from r/politics is in conservative or liberal subreddits by joining on author. Conduct sentiment analysis to see if the posts of that author are positive or negative.<br><br><br>
+                          <h4 class="tm-text-primary mb-4 tm-section-subtitle">Question 10:</h4>
+                          <b>Business goal:</b> Is the discussion around politics online balanced? Are people that are discussing politics online more liberal or conservative?<br><br>
+                          <b>Technical proposal:</b> Check if the author from r/politics is in conservative or liberal subreddits by joining on author. Conduct sentiment analysis to see if the posts of that author are positive or negative to determine what they agree with.<br><br><br>
+                          <h4 class="tm-text-primary mb-4 tm-section-subtitle">Question 11:</h4>
+                          <b>Business goal:</b> Is the president's approval rating accurate? Is the way people discuss the president online representative of his approval rating?<br><br>
+                          <b>Technical proposal:</b> Join the r/democrat reddit dataset with an approval rating dataset on the date. Create a time series that displays the number of positive posts a day and the approval rating. See if the approval rating is correlated to the number of positive comments.<br><br><br>
+                          <h4 class="tm-text-primary mb-4 tm-section-subtitle">Question 12:</h4>
+                          <b>Business goal:</b> Are there certain words or phrases that align with political bias? Write a speech based on topics that are most important to the party using language that is popular among the party.<br><br>
+                          <b>Technical proposal:</b> Train a model on the r/democrat and r/republican subreddits using SparkML. Perform sentiment analysis to only keep the positive posts from each subreddit. By only keeping positive posts, the subreddits will be void of rival party comments.<br><br><br>
+                        <p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+      
+      
+    </section>
+
+    
+
+
+      
+    </section>
+
+    
+    
+    <script src="frontend/js/jquery-1.9.1.min.js"></script>     
+    <script src="frontend/slick/slick.min.js"></script>
+    <script src="frontend/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="frontend/js/easing.min.js"></script>
+    <script src="frontend/js/jquery.singlePageNav.min.js"></script>     
+    <script src="frontend/js/bootstrap.min.js"></script> 
+    <script>
+
+      function getOffSet(){
+        var _offset = 450;
+        var windowHeight = window.innerHeight;
+
+        if(windowHeight > 500) {
+          _offset = 400;
+        } 
+        if(windowHeight > 680) {
+          _offset = 300
+        }
+        if(windowHeight > 830) {
+          _offset = 210;
+        }
+
+        return _offset;
+      }
+
+      function setParallaxPosition($doc, multiplier, $object){
+        var offset = getOffSet();
+        var from_top = $doc.scrollTop(),
+          bg_css = 'center ' +(multiplier * from_top - offset) + 'px';
+        $object.css({"background-position" : bg_css });
+      }
+
+      // Parallax function
+      // Adapted based on https://codepen.io/roborich/pen/wpAsm        
+      var background_image_parallax = function($object, multiplier, forceSet){
+        multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+        multiplier = 1 - multiplier;
+        var $doc = $(document);
+        // $object.css({"background-attatchment" : "fixed"});
+
+        if(forceSet) {
+          setParallaxPosition($doc, multiplier, $object);
+        } else {
+          $(window).scroll(function(){          
+            setParallaxPosition($doc, multiplier, $object);
+          });
+        }
+      };
+
+      var background_image_parallax_2 = function($object, multiplier){
+        multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+        multiplier = 1 - multiplier;
+        var $doc = $(document);
+        $object.css({"background-attachment" : "fixed"});
+        
+        $(window).scroll(function(){
+          if($(window).width() > 768) {
+            var firstTop = $object.offset().top,
+                pos = $(window).scrollTop(),
+                yPos = Math.round((multiplier * (firstTop - pos)) - 186);              
+
+            var bg_css = 'center ' + yPos + 'px';
+
+            $object.css({"background-position" : bg_css });
+          } else {
+            $object.css({"background-position" : "center" });
+          }
+        });
+      };
+      
+      $(function(){
+        // Hero Section - Background Parallax
+        background_image_parallax($(".tm-parallax"), 0.30, false);
+        background_image_parallax_2($("#contact"), 0.80);   
+        background_image_parallax_2($("#testimonials"), 0.80);   
+        
+        // Handle window resize
+        window.addEventListener('resize', function(){
+          background_image_parallax($(".tm-parallax"), 0.30, true);
+        }, true);
+
+        // Detect window scroll and update navbar
+        $(window).scroll(function(e){          
+          if($(document).scrollTop() > 120) {
+            $('.tm-navbar').addClass("scroll");
+          } else {
+            $('.tm-navbar').removeClass("scroll");
+          }
+        });
+        
+        // Close mobile menu after click 
+        $('#tmNav a').on('click', function(){
+          $('.navbar-collapse').removeClass('show'); 
+        })
+
+        // Scroll to corresponding section with animation
+        $('#tmNav').singlePageNav({
+          'easing': 'easeInOutExpo',
+          'speed': 600
+        });        
+        
+        // Add smooth scrolling to all links
+        // https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
+        $("a").on('click', function(event) {
+          if (this.hash !== "") {
+            var hash = this.hash;
+
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 600, 'easeInOutExpo', function(){
+              window.location.hash = hash;
+            });
+          } // End if
+        });
+
+        // Pop up
+        $('.tm-gallery').magnificPopup({
+          delegate: 'a',
+          type: 'image',
+          gallery: { enabled: true }
+        });
+
+        $('.tm-testimonials-carousel').slick({
+          dots: true,
+          prevArrow: false,
+          nextArrow: false,
+          infinite: false,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          responsive: [
+            {
+              breakpoint: 992,
+              settings: {
+                slidesToShow: 2
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 2
+              }
+            }, 
+            {
+              breakpoint: 480,
+              settings: {
+                  slidesToShow: 1
+              }                 
+            }
+          ]
+        });
+
+        // Gallery
+        $('.tm-gallery').slick({
+          dots: true,
+          infinite: false,
+          slidesToShow: 5,
+          slidesToScroll: 2,
+          responsive: [
+          {
+            breakpoint: 1199,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 991,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 767,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+        });
+      });
+    </script>
+  </body>
+</html>

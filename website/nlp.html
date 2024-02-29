@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ANLY 503- Project Group 14</title>
+    <link rel="stylesheet" href="frontend/fontawesome-5.5/css/all.min.css" />
+    <link rel="stylesheet" href="frontend/slick/slick.css">
+    <link rel="stylesheet" href="frontend/slick/slick-theme.css">
+    <link rel="stylesheet" href="frontend/magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="frontend/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="frontend/css/tooplate-infinite-loop.css" />
+<!--
+-->
+  </head>
+  <body>
+    <!-- Hero section -->
+    <section id="infinite" class="text-white tm-font-big tm-parallax">
+      <!-- Navigation -->
+      <nav class="text-white navbar navbar-expand-md tm-navbar" id="tmNav">              
+        <div class="text-white container">   
+          <div class="text-white tm-next">
+              <a href="#infinite" class="navbar-brand"></a>
+          </div>             
+            
+          <button class="text-white navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars navbar-toggler-icon"></i>
+          </button>
+          <div class="text-white collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="eda.html">EDA</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="#infinite">NLP</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="#Technical">NLP Summary</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="#Fundamental">NLP Report</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="ml.html">ML</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="conclusion.html">Conclusion</a>
+              </li>
+              
+                              
+            </ul>
+          </div>        
+        </div>
+      </nav>
+      <div class="text-center tm-hero-text-container">
+        <div class="tm-hero-text-container-inner">
+            <h2 class="tm-hero-title">NLP: Political Reddit Data Analysis</h2>
+
+            <p class="tm-hero-subtitle">
+                Group 14:
+                <br>
+                Abhishek Dutt, Austin Eaton, Jack Piccione & Atisha Rajpurohit
+              <br>
+            </p>
+        </div>        
+      </div>
+
+      <div class="tm-next tm-intro-next">
+        <a href="#whatwedo" class="text-center tm-down-arrow-link">
+          <i class="fas fa-2x fa-arrow-down tm-down-arrow"></i>
+        </a>
+      </div>      
+    </section>
+
+
+
+
+    <section id="Technical" class="tm-section-pad-top">
+        <div class="container">
+
+            <div class="row tm-content-box"><!-- first row -->
+                <div class="col-lg-12 col-xl-12">
+                    <h2 class="tm-text-primary mb-4 tm-section-title">Summary</h2>
+                    <div class="tm-intro-text-container">
+                        <p>
+                          The project starts with exploring the proportion of negative sentiment across the two political ideologies. It shows that the comments made for the conservative group were slightly more negative than the ones made for democrats. Moving on to exploring how the approval rating is related to the public's sentiment. There was no clear relation between the two, indicating that the actual approval rating has other factors affecting it.
+                          <br>
+                          Next president Biden’s sentiment has been analyzed between the different political ideologies and general population. This showed that the discussion around taxation is the most positive out of all the issues and the discussion around Ukraine is the most negative. Proceeding from just the current President’s popularity to exploring the popularity of a number of politicians and to see which party has the edge over the other, we see how often they are spoken of and what the context of the comment is. We can see that the Reublicans are more popular as they have a higher number of comments associated to them, but they also have a higher percentage of negative comments as compared to the Democrats.
+
+                        <figure>
+                            <figcaption><b>Table</b></figcaption>
+                            <iframe src="../data/plots/dem_rep.png" width="75%" height="460"></iframe>
+                        </figure>
+                        <p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+      
+      
+    </section>
+
+    <section id="Fundamental" class="tm-section-pad-top">
+      
+      <div class="container">
+
+            <div class="row tm-content-box"><!-- first row -->
+                <div class="col-lg-12 col-xl-12">
+                    <div class="tm-intro-text-container">
+                        <h2 class="tm-text-primary mb-4 tm-section-title">Report</h2>
+                        <p>
+                        <h4 class="tm-hero-text-container mb-4 tm-section-subtitle">Comparing the emotional sentiment among different political parties</h4><a href="../code/html/nlp_austin.html">Link to notebook<a>
+                        <p class="mb-4 tm-intro-text">
+                          Depending on whatever political bias a person may hold, it can often seem as though folks on one side of the aisle are angrier than those on the opposing side. However, we cannot take such suspicion to be factual, but instead, we must piece together the hard facts. Here, we aim to determine which political group contains the angriest followers. 
+                        <br>
+                          In order to determine which political group contains the angriest followers, we calculated the sentiment of all comments contained in three separate subreddits. These three subreddits were r/politics, r/Conservative, and r/democrats. We consider r/politics to be a neutral leaning subreddit compared to r/Conservative and r/democrat, and it was used as a baseline when comparing the sentiment scores. 
+                          <br>
+                          Since the number of comments contained in each subreddit differ dramatically, we compare how often each sentiment score occurs. This was done for all three of our subreddits, and the sentiment scores are: positive, negative, neutral. When comparing the sentiment scores of the three subreddits, we see that the breakdown is very similar, where the greatest percentage point difference was only 2.3%. This was found when comparing the percent of negative comments in r/Conservative to r/democrat, which respectively had percent occurrences of 54.9% and 52.6%.
+                          <figure>
+                            <figcaption><b>Plot 1</b></figcaption>
+                            <iframe src="../data/plots/SubSentimentBreakdown.html" width="100%" height="650"></iframe>
+                        </figure>
+                        <br>
+                        <br>
+                        <h4 class="tm-hero-text-container mb-4 tm-section-subtitle">Approval Rating vs calculated approval rating from sentiment</h4><a href="../code/html/nlp_jack.html">Link to notebook<a>
+                        <p class="mb-4 tm-intro-text">
+                          The president’s approval rating is gathered via polling. However, polling can be flawed because sometimes it is not representative of the population.  People also are not always honest when asked their options.  Is there a more accurate way to measure people’s opinion of the president? 
+                        <br>
+                          By analyzing the sentiment of each comment in the r/politics subreddit a new approval rating was calculated.  The calculated approval rating is the ratio of positive to negative comments per day.  There is not much correlation between the approval rating and the calculated approval rating.  The calculated approval rating is relatively constant, hovering around 40%, while the actual approval rating is declining.  The sentiment surrounding r/politics may not be the best predictor of the approval rating because the comments are not limited to only opinions about the president.
+                          <br>
+                          <figure>
+                            <figcaption><b>Plot 2</b></figcaption>
+                            <iframe src="../data/plots/time_series_correlation.html" width="100%" height="450"></iframe>
+                          </figure>
+                        <br>
+                        <br>
+                        <h4 class="tm-hero-text-container mb-4 tm-section-subtitle">Sentiment for President biden and how he handles critical issues</h4><a href="../code/html/nlp_atisha.html">Link to notebook<a>
+                        <p class="mb-4 tm-intro-text">
+                          Before diving into the public’s sentiment for how president Biden handles issues, it would be worthwhile to explore the data using wordclouds. The first one  is a general wordcloud for the comments associated with president Biden.
+                        <br>
+                        <figure>
+                            <figcaption><b>Plot 3</b></figcaption>
+                            <iframe src="../data/plots/wordcloud_politics.png" width="100%" height="600"></iframe>
+                        </figure>
+                          By analyzing the sentiment of each comment in the r/politics subreddit a new approval rating was calculated.  The calculated approval rating is the ratio of positive to negative comments per day.  There is not much correlation between the approval rating and the calculated approval rating.  The calculated approval rating is relatively constant, hovering around 40%, while the actual approval rating is declining.  The sentiment surrounding r/politics may not be the best predictor of the approval rating because the comments are not limited to only opinions about the president.
+                          <br>
+                          <figure>
+                            <figcaption><b>Plot 4</b></figcaption>
+                            <iframe src="../data/plots/wordcloud_cons.png" width="100%" height="600"></iframe>
+                        </figure>
+                        <figure>
+                            <figcaption><b>Plot 5</b></figcaption>
+                            <iframe src="../data/plots/wordcloud_dem.png" width="100%" height="600"></iframe>
+                        </figure>
+
+                          <br>
+                          Some of the important words for conservatives are economy, bill, fraud and action compared to some of the important words for democrats such as judge, history and hear.
+                          <br>
+                          Finally exploring the sentiment for how president Biden handled issues such as birth rights,covid,gun control, taxation and ukraine. These have first been explored for all comments associated with the president and then for the conservatives and republicans associated with the president.
+                          <br>
+                          <figure>
+                            <figcaption><b>Plot 6</b></figcaption>
+                            <iframe src="../data/plots/sentiment_combined.html" width="100%" height="850"></iframe>
+                        </figure>
+                        <figure>
+                            <figcaption><b>Table</b></figcaption>
+                            <iframe src="../data/plots/table_summary.png" width="100%" height="750"></iframe>
+                        </figure>
+                        <p class="mb-4 tm-intro-text">
+                        Exploring the above graph and the table with it, it can be seen that although the numbers are quite varied for these three subreddits, however the overall sentiment is similar for them. Taxation is the most positive issue handled by president Biden with 28%,33% and 31% positive proportion respectively. Similarly Ukraine is the most negative issue with 86%,86% and 87% negative proportion.
+                        <br>
+                        <br>
+                        <h4 class="tm-hero-text-container mb-4 tm-section-subtitle">Most popular leaders in contention for 2024 elections</h4><a href="../code/html/nlp_abhishek.html">Link to notebook<a>
+                        <p class="mb-4 tm-intro-text">
+                          By looking at the comments from r/Politics, dummy variables were created for the top-6 candidates for the 2024 election, using regex by finding either the first names or the last names of these candidates. These candidates were the top-3 candidates from both the democratic party and the republican party. These candidates included Joe Biden, Kamala Harris and Bernie Sanders from the democratic party and Donald Trump, Ron DeSantis and Glenn Youngkin. After this the sentiments of all these comments were calculated and the comments were then classified into three distinct sentiments, positive, neutral and negative. From here, the counts of these sentiments for each of these politicians were calculated. Donald Trump had the highest percentage of negative comments at 64.4%, Trump also had the highest number of comments referring him roughly about 1.8 M.  
+                          <br>
+                          <figure>
+                            <figcaption><b>Plot 7</b></figcaption>
+                            <iframe src="../data/plots/PopularCandidates.html" width="100%" height="650"></iframe>
+                          </figure>
+
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+      
+    </section>
+
+    
+    
+    <script src="frontend/js/jquery-1.9.1.min.js"></script>     
+    <script src="frontend/slick/slick.min.js"></script>
+    <script src="frontend/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="frontend/js/easing.min.js"></script>
+    <script src="frontend/js/jquery.singlePageNav.min.js"></script>     
+    <script src="frontend/js/bootstrap.min.js"></script> 
+    <script>
+
+      function getOffSet(){
+        var _offset = 450;
+        var windowHeight = window.innerHeight;
+
+        if(windowHeight > 500) {
+          _offset = 400;
+        } 
+        if(windowHeight > 680) {
+          _offset = 300
+        }
+        if(windowHeight > 830) {
+          _offset = 210;
+        }
+
+        return _offset;
+      }
+
+      function setParallaxPosition($doc, multiplier, $object){
+        var offset = getOffSet();
+        var from_top = $doc.scrollTop(),
+          bg_css = 'center ' +(multiplier * from_top - offset) + 'px';
+        $object.css({"background-position" : bg_css });
+      }
+
+      // Parallax function
+      // Adapted based on https://codepen.io/roborich/pen/wpAsm        
+      var background_image_parallax = function($object, multiplier, forceSet){
+        multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+        multiplier = 1 - multiplier;
+        var $doc = $(document);
+        // $object.css({"background-attatchment" : "fixed"});
+
+        if(forceSet) {
+          setParallaxPosition($doc, multiplier, $object);
+        } else {
+          $(window).scroll(function(){          
+            setParallaxPosition($doc, multiplier, $object);
+          });
+        }
+      };
+
+      var background_image_parallax_2 = function($object, multiplier){
+        multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+        multiplier = 1 - multiplier;
+        var $doc = $(document);
+        $object.css({"background-attachment" : "fixed"});
+        
+        $(window).scroll(function(){
+          if($(window).width() > 768) {
+            var firstTop = $object.offset().top,
+                pos = $(window).scrollTop(),
+                yPos = Math.round((multiplier * (firstTop - pos)) - 186);              
+
+            var bg_css = 'center ' + yPos + 'px';
+
+            $object.css({"background-position" : bg_css });
+          } else {
+            $object.css({"background-position" : "center" });
+          }
+        });
+      };
+      
+      $(function(){
+        // Hero Section - Background Parallax
+        background_image_parallax($(".tm-parallax"), 0.30, false);
+        background_image_parallax_2($("#contact"), 0.80);   
+        background_image_parallax_2($("#testimonials"), 0.80);   
+        
+        // Handle window resize
+        window.addEventListener('resize', function(){
+          background_image_parallax($(".tm-parallax"), 0.30, true);
+        }, true);
+
+        // Detect window scroll and update navbar
+        $(window).scroll(function(e){          
+          if($(document).scrollTop() > 120) {
+            $('.tm-navbar').addClass("scroll");
+          } else {
+            $('.tm-navbar').removeClass("scroll");
+          }
+        });
+        
+        // Close mobile menu after click 
+        $('#tmNav a').on('click', function(){
+          $('.navbar-collapse').removeClass('show'); 
+        })
+
+        // Scroll to corresponding section with animation
+        $('#tmNav').singlePageNav({
+          'easing': 'easeInOutExpo',
+          'speed': 600
+        });        
+        
+        // Add smooth scrolling to all links
+        // https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
+        $("a").on('click', function(event) {
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 600, 'easeInOutExpo', function(){
+              window.location.hash = hash;
+            });
+          } // End if
+        });
+
+        // Pop up
+        $('.tm-gallery').magnificPopup({
+          delegate: 'a',
+          type: 'image',
+          gallery: { enabled: true }
+        });
+
+        $('.tm-testimonials-carousel').slick({
+          dots: true,
+          prevArrow: false,
+          nextArrow: false,
+          infinite: false,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          responsive: [
+            {
+              breakpoint: 992,
+              settings: {
+                slidesToShow: 2
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 2
+              }
+            }, 
+            {
+              breakpoint: 480,
+              settings: {
+                  slidesToShow: 1
+              }                 
+            }
+          ]
+        });
+
+        // Gallery
+        $('.tm-gallery').slick({
+          dots: true,
+          infinite: false,
+          slidesToShow: 5,
+          slidesToScroll: 2,
+          responsive: [
+          {
+            breakpoint: 1199,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 991,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 767,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+        });
+      });
+    </script>
+  </body>
+</html>

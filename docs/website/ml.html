@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>ANLY 503- Project Group 14</title>
+  <link rel="stylesheet" href="frontend/fontawesome-5.5/css/all.min.css" />
+  <link rel="stylesheet" href="frontend/slick/slick.css">
+  <link rel="stylesheet" href="frontend/slick/slick-theme.css">
+  <link rel="stylesheet" href="frontend/magnific-popup/magnific-popup.css">
+  <link rel="stylesheet" href="frontend/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="frontend/css/tooplate-infinite-loop.css" />
+  <!--
+-->
+</head>
+
+<style>
+  table,
+  th,
+  td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+</style>
+
+<body>
+  <!-- Hero section -->
+  <section id="infinite" class="text-white tm-font-big tm-parallax">
+    <!-- Navigation -->
+    <nav class="text-white navbar navbar-expand-md tm-navbar" id="tmNav">
+      <div class="text-white container">
+        <div class="text-white tm-next">
+          <a href="#infinite" class="navbar-brand"></a>
+        </div>
+
+        <button class="text-white navbar-toggler" type="button" data-toggle="collapse"
+          data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="fas fa-bars navbar-toggler-icon"></i>
+        </button>
+        <div class="text-white collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="../index.html">Introduction</span></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="eda.html">EDA</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="nlp.html">NLP</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link tm-nav-link" href="#infinite">ML</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link tm-nav-link" href="#Technical">ML Summary</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link tm-nav-link" href="#Fundamental">ML Report</a>
+            </li>
+            <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="conclusion.html">Conclusion</a>
+            </li>
+
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="text-center tm-hero-text-container">
+      <div class="tm-hero-text-container-inner">
+        <h2 class="tm-hero-title">Machine Learning: Reddit Politics Data</h2>
+
+        <p class="tm-hero-subtitle">
+          Group 30:
+          <br>
+          Abhishek Dutt, Austin Eaton, Jack Piccione & Atisha Rajpurohit
+          <br>
+        </p>
+      </div>
+    </div>
+
+    <div class="tm-next tm-intro-next">
+      <a href="#whatwedo" class="text-center tm-down-arrow-link">
+        <i class="fas fa-2x fa-arrow-down tm-down-arrow"></i>
+      </a>
+    </div>
+  </section>
+
+
+  <section id="Technical" class="tm-section-pad-top">
+    <div class="container">
+
+      <div class="row tm-content-box">
+        <!-- first row -->
+        <div class="col-lg-12 col-xl-12">
+          <h2 class="tm-text-primary mb-4 tm-section-title">Summary</h2>
+          <div class="tm-intro-text-container">
+            <p>
+
+              Although it is still a relatively new tool, machine learning has shown us time and time again that it can
+              be used to solve a neverending set of problems. In this project, we set out two main goals we wanted to
+              leverage machine learning algorithms to accomplish. The first goal we set for ourselves was to determine,
+              without any prior contextual clues, whether a comment in a subreddit (r/Politics) would be considered
+              controversial or not. In Reddit-speak, a comment is considered controversial if it has lots of both
+              upvotes and downvotes. Here, our machine learning algorithm performed remarkably well. This model was able
+              to predict with 77% accuracy whether a comment posted in the r/Politics subreddit would be considered
+              controversial or not. In other words, by looking at a line of text, our algorithm would be able to
+              determine whether a comment would be a divisive topic among a large group of people. The business goal of this model is to increase screen time of the users, if we are able to show more controversial comments, this might increase the time that the users spend on Reddit</p>
+            <p>
+              The second goal we set for ourselves was to determine the political ideology of a Reddit user. Similar to
+              predicting the controversiality, the algorithm was designed to calculate whether a random comment given to
+              it would be from a user who was either on the liberal or conservative side of the political spectrum. This
+              second model we generated predicted with 62% accuracy the political ideology of users based on comments
+              collected from the r/Conservative and r/Democrat subreddits. This turned out to be a much more difficult
+              task when compared to the first model that predicted controversiality. However, with increased training
+              and hyperparameter tuning, there’s plenty of room for the accuracy to grow!
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </section>
+
+  <section id="Fundamental" class="tm-section-pad-top">
+
+    <div class="container">
+
+      <div class="row tm-content-box">
+        <!-- first row -->
+        <div class="col-lg-12 col-xl-12">
+          <div class="tm-intro-text-container">
+            <h2 class="tm-text-primary mb-4 tm-section-title">Report</h2>
+            <p>Whether a comment is controversial or not, helps in assessing the general discussion around several
+              topics. To start off, it's worthwhile to predict whether a particular comment made for r/Politics is
+              controversial or not. Proceeding to the machine learning aspect, the data was randomly split into a
+              training and test set. A logistic regression model was used for this purpose. The reason this model was
+              chosen was because of its simplicity for training the data.</p>
+            <br>
+
+            <!-- ABHISHEK'S MODEL -->
+            <h4 class="tm-hero-text-container mb-4 tm-section-subtitle">Determining whether a political comment will be
+              controversial</h4>
+            <p>Whether a comment is controversial or not, helps in assessing the general discussion around several
+              topics.
+              To start off, data was cleaned by removing the [removed] and [deleted] comments. After that, tokenizer was used to tokenize the data and then stopwords were removed from the data. After this, the tokens were converted into a matrix of counts using the count vectorizer and then the inverse of this matrix was calculated using the IDF function.
+              Proceeding to the machine learning aspect, the data was randomly split into a training and test
+              set.
+              A logistic regression model was used for this purpose. The reason this model was chosen was because of its
+              simplicity for training the data.</p>
+
+            <h4 class="tm-hero-text-container mb-4 tm-section-subtitle">Bonus-Pipeline</h4>
+
+
+            <p>The train and test sets were prepared by creating a pipeline that tokenizes the data, removes stopwords,
+              creates a count vectorizer and creates an inverse term frequency. While the accuracy was 77%, the
+              algorithm
+              did achieve an F1 score of 83%. The algorithm did a good job at classifying the controversial class
+              precisely and having a low number of false positives. This was confirmed by a precision score for 97.4%.
+              Finally the area under the curve was 48.6%. The model’s performance can be represented by the confusion
+              matrix below:</p>
+            <figure>
+              <figcaption><b>Plot 1: Confusion Matrix</b></figcaption>
+              <iframe src="../data/plots/confusion_matrix_abhishek.png" width="65%" height="750"></iframe>
+            </figure>
+
+            <figure>
+              <figcaption><b>Table 1: Evaluation Metrics</b></figcaption>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Evaluation Metric</th>
+                    <th>Score</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Accuracy</td>
+                    <td>0.77364</td>
+                  </tr>
+                  <tr>
+                    <td>Area under ROC</td>
+                    <td>0.48639</td>
+                  </tr>
+                  <tr>
+                    <td>Precision</td>
+                    <td>0.97369</td>
+                  </tr>
+                  <tr>
+                    <td>Recall</td>
+                    <td>0.77305</td>
+                  </tr>
+                  <tr>
+                    <td>F1</td>
+                    <td>0.83680</td>
+                  </tr>
+                </tbody>
+              </table>
+            </figure>
+            <a
+              href="../code/html/ml_abhishek.html">Link
+              to notebook<a>
+                <br>
+                <br>
+                <!-- JACK'S MODEL(S) -->
+                <h4 class="tm-hero-text-container mb-4 tm-section-subtitle">Using comments to determine a person's
+                  political stance</h4>
+                <p>After predicting the controversiality scores for the r/Politics subreddit, it makes sense to attempt
+                  to
+                  predict a person’s political affiliation based on what they are commenting online. The dataset was
+                  randomly split into train and test and prepared using a pipeline, similar to the above. The labels
+                  chosen
+                  here represented the political affiliations and were conservative or democrat. A logistic regression
+                  model
+                  was chosen here as well, owing to the reasons stated above. The confusion matrix generated is:</p>
+
+                <figure style="left: 50%">
+                  <figcaption><b>Plot 2: Confusion Matrix (Model-1)</b></figcaption>
+                  <iframe src="../data/plots/confusion_matrix_jack.png" width="65%" height="750"></iframe>
+                </figure>
+                <p>Some of the initial observations by looking at the confusion matrix are that for about 3476 conservatives, about 68% (recall for conservatives) were predicted correctly as conservatives. Similarly for democrats, out of 3475 democrats, about 55% (recall for democrats) were predicted correctly for democrats. This could either go back to the data generation process or stronger features to predict conservatives.</p>
+
+                <p>The roc curve could be a more intuitive tool to assess the model’s performance and is shown below:
+                </p>
+                <figure>
+                  <figcaption><b>Plot 3: ROC Curve (Model-1)</b></figcaption>
+                  <iframe src="../data/plots/ROC_curveJack.html" width="750" height="520"></iframe>
+                </figure>
+                <p>Although the roc curve has a good AUC score of 0.9027, it is in conjunction with the results from the confusion matrix above. That is, the algorithm has a lower sensitivity than specificity or lower recall. To test how tuning or changing the parameters for the Logistic Regression model to maxIter=100 and regParam=0.8 would affect the predictions, the following results have been achieved:</p>
+                <figure>
+                  <figcaption><b>Table 2: Evaluation Metrics</b></figcaption>
+                  <table>
+                    <!-- <caption>The Three Most Popular JavaScript Libraries</caption> -->
+                    <thead>
+                      <tr>
+                        <th>Evaluation Metric</th>
+                        <th>Score</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Accuracy</td>
+                        <td>0.62</td>
+                      </tr>
+                      <tr>
+                        <td>Precision</td>
+                        <td>0.63</td>
+                      </tr>
+                      <tr>
+                        <td>Recall</td>
+                        <td>0.55</td>
+                      </tr>
+                      <tr>
+                        <td>F1</td>
+                        <td>0.59</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </figure>
+                <br>
+                <p>Changing the parameters for the Logistic Regression model to maxIter=100 and regParam=0.8 , the
+                  following results have been achieved:</p>
+                <figure>
+                  <figcaption><b>Plot 4: Confusion Matrix (Model-2)</b></figcaption>
+                  <iframe src="../data/plots/confusion_matrix2_jack.png" width="65%" height="750"></iframe>
+                </figure>
+                <p>Now the confusion matrix shows that out of 3476 conservatives, about 73% (recall for conservatives) were predicted correctly. Similarly for democrats, out of 3475 democrats about 51% (recall for democrats) were predicted correctly. This highlights how tuning could work for one class and not the other and the need to choose the optimal parameters for achieving a balance.</p>
+                <figure>
+                  <figcaption><b>Plot 5: ROC Curve (Model-2)</b></figcaption>
+                  <iframe src="../data/plots/ROC_curve2Jack.html" width="750" height="520"></iframe>
+                </figure>
+                <p>While the AUC score was good for the first model , it did improve slightly for the better one to 0.9050. The first model did a better job at classifying the conservatives, with a higher TP score and lower negative score for the FN for the conservatives.</p>
+
+                <a
+                  href="../code/html/ml_jack.html">Link
+                  to notebook<a>
+                    <br>
+                    <br>
+                    <p>While the AUC score was good for the first model , it did improve slightly for the better one to
+                      0.9050. The first model did a better job at classifying the conservatives, with a higher TP
+                      score
+                      and lower negative score for the FN for the conservatives. However the second model worked
+                      better at
+                      classifying the democrats.</p>
+                    <h4 class="tm-hero-text-container mb-4 tm-section-subtitle">Further Work</h4>
+                    <p>Using the above predictions over time, would help assess how controversial the scores are at a
+                      particular time and hence can be traced to particular issues at that time. Similarly, predicting
+                      if
+                      there are more conservatives or democrats at a time , can help understand which issues are more
+                      popular or unpopular with both of these political affiliations.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <script src="frontend/js/jquery-1.9.1.min.js"></script>
+  <script src="frontend/slick/slick.min.js"></script>
+  <script src="frontend/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <script src="frontend/js/easing.min.js"></script>
+  <script src="frontend/js/jquery.singlePageNav.min.js"></script>
+  <script src="frontend/js/bootstrap.min.js"></script>
+  <script>
+
+    function getOffSet() {
+      var _offset = 450;
+      var windowHeight = window.innerHeight;
+
+      if (windowHeight > 500) {
+        _offset = 400;
+      }
+      if (windowHeight > 680) {
+        _offset = 300
+      }
+      if (windowHeight > 830) {
+        _offset = 210;
+      }
+
+      return _offset;
+    }
+
+    function setParallaxPosition($doc, multiplier, $object) {
+      var offset = getOffSet();
+      var from_top = $doc.scrollTop(),
+        bg_css = 'center ' + (multiplier * from_top - offset) + 'px';
+      $object.css({ "background-position": bg_css });
+    }
+
+    // Parallax function
+    // Adapted based on https://codepen.io/roborich/pen/wpAsm        
+    var background_image_parallax = function ($object, multiplier, forceSet) {
+      multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+      multiplier = 1 - multiplier;
+      var $doc = $(document);
+      // $object.css({"background-attatchment" : "fixed"});
+
+      if (forceSet) {
+        setParallaxPosition($doc, multiplier, $object);
+      } else {
+        $(window).scroll(function () {
+          setParallaxPosition($doc, multiplier, $object);
+        });
+      }
+    };
+
+    var background_image_parallax_2 = function ($object, multiplier) {
+      multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+      multiplier = 1 - multiplier;
+      var $doc = $(document);
+      $object.css({ "background-attachment": "fixed" });
+
+      $(window).scroll(function () {
+        if ($(window).width() > 768) {
+          var firstTop = $object.offset().top,
+            pos = $(window).scrollTop(),
+            yPos = Math.round((multiplier * (firstTop - pos)) - 186);
+
+          var bg_css = 'center ' + yPos + 'px';
+
+          $object.css({ "background-position": bg_css });
+        } else {
+          $object.css({ "background-position": "center" });
+        }
+      });
+    };
+
+    $(function () {
+      // Hero Section - Background Parallax
+      background_image_parallax($(".tm-parallax"), 0.30, false);
+      background_image_parallax_2($("#contact"), 0.80);
+      background_image_parallax_2($("#testimonials"), 0.80);
+
+      // Handle window resize
+      window.addEventListener('resize', function () {
+        background_image_parallax($(".tm-parallax"), 0.30, true);
+      }, true);
+
+      // Detect window scroll and update navbar
+      $(window).scroll(function (e) {
+        if ($(document).scrollTop() > 120) {
+          $('.tm-navbar').addClass("scroll");
+        } else {
+          $('.tm-navbar').removeClass("scroll");
+        }
+      });
+
+      // Close mobile menu after click 
+      $('#tmNav a').on('click', function () {
+        $('.navbar-collapse').removeClass('show');
+      })
+
+      // Scroll to corresponding section with animation
+      $('#tmNav').singlePageNav({
+        'easing': 'easeInOutExpo',
+        'speed': 600
+      });
+
+      // Add smooth scrolling to all links
+      // https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
+      $("a").on('click', function (event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          var hash = this.hash;
+
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 600, 'easeInOutExpo', function () {
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+
+      // Pop up
+      $('.tm-gallery').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        gallery: { enabled: true }
+      });
+
+      $('.tm-testimonials-carousel').slick({
+        dots: true,
+        prevArrow: false,
+        nextArrow: false,
+        infinite: false,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: 2
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1
+            }
+          }
+        ]
+      });
+
+      // Gallery
+      $('.tm-gallery').slick({
+        dots: true,
+        infinite: false,
+        slidesToShow: 5,
+        slidesToScroll: 2,
+        responsive: [
+          {
+            breakpoint: 1199,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 991,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 767,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+    });
+  </script>
+</body>
+
+</html>
